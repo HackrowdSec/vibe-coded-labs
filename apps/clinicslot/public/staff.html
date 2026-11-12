@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClinicSlot: today's appointments</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<nav><b>Clinic<i>Slot</i><span class="sample">SAMPLE PRODUCT</span></b><span>Sample Family Clinic, Yaba</span></nav>
+<main>
+  <h1>Upcoming appointments</h1>
+  <div class="card"><table id="list"><tr><th>Ref</th><th>Patient</th><th>Phone</th><th>When</th><th>Reason</th></tr></table></div>
+  <p class="hint">Staff view. (In this sample, the page loads without any staff login.)</p>
+</main>
+<script src="/app.js"></script>
+<script>
+api("appointments").then((rows) => {
+  list.innerHTML += rows.map((a) => `<tr><td>#${a.id}</td><td>${a.patient}</td><td>${a.phone}</td><td>${a.date} ${a.time}</td><td>${a.reason}</td></tr>`).join("");
+});
+</script>
+</body></html>

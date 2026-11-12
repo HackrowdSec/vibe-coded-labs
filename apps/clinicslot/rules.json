@@ -1,0 +1,4 @@
+{
+  "appointments": { "read": true, "write": true },
+  "clinics": { "read": true, "write": false }
+}

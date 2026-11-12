@@ -1,0 +1,11 @@
+{
+  "name": "buka-orders-sample",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SAMPLE app for a talk demo. Deliberately small, runs on localhost only, no dependencies.",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test \"test/*.test.js\""
+  }
+}
